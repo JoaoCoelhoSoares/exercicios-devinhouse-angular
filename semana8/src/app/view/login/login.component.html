@@ -1,0 +1,12 @@
+<button [routerLink]="'/home'"> Voltar para Home</button>
+
+<form>
+    <label for="username">Username</label>
+    <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required #username="ngModel" />
+
+    <label for="password">Senha</label>
+    <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6"
+        #password="ngModel" />
+
+    <button type="submit">Enviar</button>
+</form>

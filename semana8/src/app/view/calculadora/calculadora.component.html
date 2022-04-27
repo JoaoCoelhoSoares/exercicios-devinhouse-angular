@@ -1,0 +1,23 @@
+<button [routerLink]="'/home'"> Voltar para Home</button>
+
+<div id="calculadora">
+
+    <label for="valor1">Digite o primeiro valor:</label>
+    <input type="number" id="valor1" placeholder="Ex. 123" [(ngModel)]='valor1'>
+
+    <label for="valor2">Digite o segundo valor:</label>
+    <input type="number" id="valor2" placeholder="Ex. 123" [(ngModel)]='valor2'>
+    <span>Informe o tipo de operação:</span>
+
+    <div>
+        <button (click)="informaOperacao('+')">+</button>
+        <button (click)="informaOperacao('-')">-</button>
+        <button (click)="informaOperacao('*')">*</button>
+        <button (click)="informaOperacao('/')">/</button>
+    </div>
+    <button (click)="acaoBotao('calcular')" id="botaoCalcular">Calcular</button>
+    <button (click)="acaoBotao('limpar')" id="botaoLimpar">Limpar</button>
+
+
+    <span>O resultado do calculo é: <b>{{valorCalculado}}</b></span>
+</div>

@@ -1,0 +1,19 @@
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+    li {
+        list-style-type: none;
+    }
+
+    #netflixLogo {
+        height: 30px;
+        width: 110px;
+    }
+}
+
+li:hover {
+    color: #e50914;
+    font-weight: 800;
+}

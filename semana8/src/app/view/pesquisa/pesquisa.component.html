@@ -1,0 +1,8 @@
+<button [routerLink]="'/home'"> Voltar para Home</button>
+
+<div>
+    <label for="inputPesquisa">Digite um texto:</label>
+    <input type="text" id="inputPesquisa" placeholder="Ex. 123" (keydown)="capturaTexto($event)">
+
+    <p>O texto digitado é: <b>{{textoDigitado}}</b></p>
+</div>
