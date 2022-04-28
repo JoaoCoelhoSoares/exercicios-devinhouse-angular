@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <h1>Exemplo de Event-binding</h1>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input (change)="displayValue($event)" type="text" class="form-control" placeholder="Digite algo aqui ..."
+            aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <p> Capturando o valor do que foi digitado no input:
+        <span style="color: darkcyan; font-size: 25px; font-weight: 800;"> {{ data }}</span>
+    </p>
+</div>
+
+<div class="jumbotron">
+    <h1> Exemplo 2  Event-binding </h1>
+    <div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="handleClick()">
+            Clique aqui para mostrar/ocultar o conteudo:
+        </button>
+    </div>
+    <br>
+    <div *ngIf="toDisplay" class="data">
+        <div class="centered">
+            {{ name }}
+        </div>
+    </div>
+</div>

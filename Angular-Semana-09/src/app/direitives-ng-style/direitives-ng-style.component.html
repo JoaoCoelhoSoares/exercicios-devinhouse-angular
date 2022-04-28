@@ -1,0 +1,32 @@
+<div [ngStyle]="{'background-color':'green'}"></div>
+
+<div class="jumbotron">
+    <h1>NgStyle</h1>
+    <ul *ngFor="let person of people">
+        <li [ngStyle]="{'color':getColor(person.country)}">
+            {{ person.name }} ({{ person.country }})
+        </li>
+    </ul>
+</div>
+
+
+<div class="jumbotron">
+
+    <h1>NgClass</h1>
+    <ul *ngFor="let person of people">
+        <div [ngClass]="{'text-success':person.country === 'UK'}">
+            <li>
+                {{ person.name }} ({{ person.country }})
+            </li>
+        </div>
+    </ul>
+
+    <ul *ngFor="let person of people">
+        <li [ngClass]="{
+        'text-success':person.country === 'UK',
+        'text-primary':person.country === 'USA',
+        'text-danger':person.country === 'HK'
+        }">{{ person.name }} ({{ person.country }})
+        </li>
+    </ul>
+</div>
